@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: rgb(31, 31, 31);
+  --operand-color: rgb(51, 51, 51);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  background-color: var(--bg-color);
   width: 510px;
 }
 
@@ -30,9 +35,8 @@ body {
   margin: 5px 5px;
   padding: 30px;
   font-size: 60px;
-  background-color: grey;
+  background-color: var(--bg-color);
   color: white;
-  border: 3px solid black;
 }
 
 .calc-btns {
@@ -41,7 +45,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   text-align: center;
-  border: 1px solid black;
+  gap: 2px;
+}
+
+svg {
+  fill: white;
 }
 
 .btn {
@@ -49,12 +57,13 @@ body {
   height: 100%;
   background-color: grey;
   color: white;
-  border: 2px solid black;
   padding: 30px;
 }
 
-#zero {
-  width: 100%;
-  height: 100%;
-  grid-column: span 2;
+.operand {
+  background-color: var(--operand-color);
+}
+
+.btn:hover {
+  background-color: slategrey;
 }
